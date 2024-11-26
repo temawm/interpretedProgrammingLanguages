@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страховая компания</title>
+</head>
+<body>
+    <h1>Добавить клиента</h1>
+    <form action="/cgi_bin/add_client.py" method="post">
+        <label for="name">Имя:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="phone">Телефон:</label><br>
+        <input type="text" id="phone" name="phone"><br><br>
+        <input type="submit" value="Добавить клиента">
+    </form>
+    <h1>Добавить полис</h1>
+    <form action="/cgi_bin/add_policy.py" method="post">
+        <label for="policy_number">Номер полиса:</label><br>
+        <input type="text" id="policy_number" name="policy_number" required><br>
+        <label for="client_id">ID клиента:</label><br>
+        <input type="number" id="client_id" name="client_id" required><br>
+        <label for="policy_type">Тип полиса:</label><br>
+        <input type="text" id="policy_type" name="policy_type" required><br>
+        <label for="start_date">Дата начала:</label><br>
+        <input type="date" id="start_date" name="start_date" required><br>
+        <label for="end_date">Дата окончания:</label><br>
+        <input type="date" id="end_date" name="end_date" required><br><br>
+        <input type="submit" value="Добавить полис">
+    </form>
+    <h1>Добавить страховой случай</h1>
+    <form action="/cgi_bin/add_claim.py" method="post">
+        <label for="policy_id">ID полиса:</label><br>
+        <input type="number" id="policy_id" name="policy_id" required><br>
+        <label for="claim_date">Дата:</label><br>
+        <input type="date" id="claim_date" name="claim_date" required><br>
+        <label for="amount">Сумма:</label><br>
+        <input type="number" id="amount" name="amount" required><br>
+        <label for="status">Статус:</label><br>
+        <input type="text" id="status" name="status" required><br><br>
+        <input type="submit" value="Добавить страховой случай">
+    </form>
+</body>
+</html>
